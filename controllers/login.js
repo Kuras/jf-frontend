@@ -11,7 +11,8 @@
       console.log("redirect --> " + redirectPath + ", path = " + uri.path() + ", search = " + uri.search());
       $timeout(function(){
         var l;
-        l = $location.path(uri.path());
+        var baseHref = $("base").attr('href')
+        l = $location.path(uri.path().replace(baseHref,"/"));  
         return setSearch(l);
       }, 1000);
       function setSearch(location){
