@@ -1,4 +1,4 @@
 # jf-frontend
 
 #Installation
-bower install jaf
+bower install jabf

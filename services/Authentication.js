@@ -14,12 +14,17 @@
       var dfd;
       dfd = $.Deferred();
       AjaxAction("is_logged_in").withRawResponse().done(function(response){
-        if (response.is_logged_in) {
-          Session.login(response.username);
-          return dfd.resolve(response.username);
-        } else {
-          return dfd.reject();
-        }
+            if (response.is_logged_in) {
+              AjaxAction().post("fullname")
+                .withQueryParams({username: response.username})
+                .withRawResponse()
+                .done(function (data) {
+                    Session.login(response.username,data.replace(/\"/g, ""));
+                });
+              return dfd.resolve(response.username);
+            } else {
+              return dfd.reject();
+            }
       });
       return dfd;
     };

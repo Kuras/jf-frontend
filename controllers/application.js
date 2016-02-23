@@ -11,6 +11,7 @@
     }
     spinner = Spinner('spinner', CONFIG.spinner);
     $scope.currentUser = null;
+    $scope.fullUserName = null;
     $scope.setPendingRequest = function(pendingRequest){
       console.log("setPendingRequest ->", pendingRequest);
       if (pendingRequest) {

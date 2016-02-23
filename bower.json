@@ -1,8 +1,8 @@
 {
-  "name": "jaf",
-  "version": "0.1.15",
+  "name": "jabf",
+  "version": "0.1.16",
   "authors": [
-    "Jan Swiecki <jan.swiecki@gmail.com>", "Anton Temchenko <anton@temchenko.com.ua>"
+    "Jan Swiecki <jan.swiecki@gmail.com>", "Anton Temchenko <anton@temchenko.com.ua>", "Przemysław Kura <kuraprzemek@gmail.com>"
   ],
   "main": [
     "app.js",
