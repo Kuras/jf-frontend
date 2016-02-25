@@ -15,7 +15,7 @@
       dfd = $.Deferred();
       AjaxAction("is_logged_in").withRawResponse().done(function(response){
             if (response.is_logged_in) {
-              AjaxAction().post("fullname")
+              AjaxAction().get("fullname")
                 .withQueryParams({username: response.username})
                 .withRawResponse()
                 .done(function (data) {
